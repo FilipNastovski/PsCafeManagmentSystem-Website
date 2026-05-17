@@ -229,6 +229,15 @@ section {
     background-color: var(--accent-slate-hover);
 }
 
+.btn-blue {
+    background-color: var(--accent-blue);
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: var(--accent-blue-hover);
+}
+
 /* Features */
 
 .feature-row {
