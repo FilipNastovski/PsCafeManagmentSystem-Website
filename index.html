@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A lightweight desktop application for managing PlayStation devices in a cafe. Track sessions, handle billing, and generate reports, all offline, all local.">
+    <title data-i18n="page_title">PlayStation Cafe Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">PS Cafe</a>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#download" data-i18n="nav_download">Download</a></li>
+                <li><a href="#requirements" data-i18n="nav_requirements">Requirements</a></li>
+                <li><a href="#getting-started" data-i18n="nav_getting_started">Getting Started</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">MK</button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">PlayStation Cafe Management System</h1>
+                <p class="hero-tagline" data-i18n="hero_tagline">A lightweight desktop application for managing PlayStation devices in a cafe. Track sessions, handle billing, and generate reports, all offline, all local.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary" data-i18n="hero_btn_windows">Download for Windows</a>
+                    <a href="#download" class="btn btn-secondary" data-i18n="hero_btn_linux">Download for Linux</a>
+                </div>
+            </div>
+            <div class="hero-screenshot">
+                <img src="screenshots/hero-dashboard.webp" alt="Dashboard showing all devices with real-time status">
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title" data-i18n="features_title">Features</h2>
+
+            <div class="feature-row">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-dashboard.webp" alt="Dashboard with device status overview">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_dashboard_title">Dashboard</h3>
+                    <p data-i18n="feature_dashboard_desc">View all devices with real-time status, elapsed time, and estimated cost at a glance.</p>
+                </div>
+            </div>
+
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-sessions.webp" alt="Session start dialog">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_sessions_title">Session Management</h3>
+                    <p data-i18n="feature_sessions_desc">Start timed (fixed duration) or open-ended sessions with a single click.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-billing.webp" style="max-height: 500px; " alt="Session end summary with price calculation">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_billing_title">Automatic Billing</h3>
+                    <p data-i18n="feature_billing_desc">Minute-based billing in MKD with transparent pricing shown on session end.</p>
+                </div>
+            </div>
+
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-alerts.webp" alt="Alert notification when session expires">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_alerts_title">Sound Alerts</h3>
+                    <p data-i18n="feature_alerts_desc">Get notified when timed sessions expire. Mute toggle available for quiet hours.</p>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-reports.webp" alt="Reports window with date range filter">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_reports_title">Reports</h3>
+                    <p data-i18n="feature_reports_desc">View revenue for Today, Week, Month, or custom date ranges, filter by device.</p>
+                </div>
+            </div>
+
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-screenshot">
+                    <img src="screenshots/feature-devices.webp" alt="Device management dialog">
+                </div>
+                <div class="feature-text">
+                    <h3 data-i18n="feature_devices_title">Device Management</h3>
+                    <p data-i18n="feature_devices_desc">Add, edit, or remove devices with custom hourly rates. Auto-named PS1, PS2, etc.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2 class="section-title" data-i18n="download_title">Download</h2>
+            <div id="release-info" class="release-badge" data-i18n="download_loading">Loading latest version...</div>
+            <div class="download-cards">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18h18M3 18v2h18v-2M3 18l9-9 9 9"/></svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p class="download-format" data-i18n="download_windows_format">.zip, Extract and run</p>
+                    <a id="download-windows" href="#" class="btn btn-primary btn-download" target="_blank" rel="noopener" data-i18n="download_windows_btn">
+                        Download for Windows
+                    </a>
+                    <p class="download-note" data-i18n="download_windows_note">Windows 10 or later</p>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Linux</h3>
+                    <p class="download-format" data-i18n="download_linux_format">.tar.gz, Extract and run</p>
+                    <a id="download-linux" href="#" class="btn btn-secondary btn-download" target="_blank" rel="noopener" data-i18n="download_linux_btn">
+                        Download for Linux
+                    </a>
+                    <p class="download-note" data-i18n="download_linux_note">Modern distro (glibc 2.31+)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="requirements">
+            <h2 class="section-title" data-i18n="requirements_title">System Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3>Windows</h3>
+                    <ul>
+                        <li data-i18n="req_win_1">Windows 10 or later</li>
+                        <li data-i18n="req_space">~50-100 MB disk space</li>
+                        <li data-i18n="req_no_install">No installation required</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h3>Linux</h3>
+                    <ul>
+                        <li data-i18n="req_linux_1">Modern distro (glibc 2.31+)</li>
+                        <li data-i18n="req_space">~50-100 MB disk space</li>
+                        <li data-i18n="req_no_install">No installation required</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="requirements-note" data-i18n="requirements_note">Fully portable, all data stored locally on your machine. No internet connection required.</p>
+        </section>
+
+        <section id="getting-started">
+            <h2 class="section-title" data-i18n="getting_started_title">Getting Started</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-screenshot">
+                        <img src="screenshots/step-1-download.webp" alt="Download and extract">
+                    </div>
+                    <h3 data-i18n="step_1_title">Download and Extract</h3>
+                    <p data-i18n="step_1_desc">Download the archive for your platform and extract it to any folder.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-screenshot">
+                        <img src="screenshots/step-2-run.webp" alt="Run the executable">
+                    </div>
+                    <h3 data-i18n="step_2_title">Run the App</h3>
+                    <p data-i18n="step_2_desc">Double-click the executable, no setup or installation needed.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-screenshot">
+                        <img src="screenshots/step-3-session.webp" alt="Start a session">
+                    </div>
+                    <h3 data-i18n="step_3_title">Start a Session</h3>
+                    <p data-i18n="step_3_desc">Click <strong>Start</strong> on any available device to begin a timed or open session.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title" data-i18n="faq_title">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_1_q">Is it free?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_1_a">Yes, completely free to use.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_2_q">Does it work offline?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_2_a">Yes, fully local. No internet connection required. All data is stored in a local SQLite database on your machine.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_3_q">Where is my data stored?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_3_a">All data is stored locally in a SQLite database. On Windows, it is saved in <code>%APPDATA%/PsCafeManagement/pscafe.db</code>. On Linux, it is in <code>~/.local/share/PsCafeManagement/pscafe.db</code>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_4_q">Can I use it on multiple computers?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_4_a">Yes, you can install and run it on any number of machines. However, data does not sync between computers, each machine has its own independent database.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_5_q">What currency does it use?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_5_a">MKD (Macedonian Denar). Prices are stored as whole integers with no decimals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 PsCafe Management System</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
